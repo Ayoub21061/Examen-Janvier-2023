@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="css/styles.css">
+
+<h1>Test Yourself</h1>
+<ul>
+  <% for(mot of listemots) { %>
+    <li>Ta réponse: <strong><%= mot.translation %></strong> - La réponse attendu était: <strong><%= mot.translation %></strong> <a href="/delete/<%= elem.idmots %>">Effacer</a></li>
+  <% } %>
+</ul>
+
+How do you say "<strong>Hello</strong>" in french?<br/>
+
+<form action="/add" method="POST">
+  <br/>
+  Ta réponse:
+  <input name="translation" />
+  <input type="submit" name="Envoyer" value="Submit" />
+</form>
+
+<br/>
+
+
+<form action="/otherpage" method="POST">
+  <input type="submit" name="otherpage" value="Voir liste de vocabulaire">
+</form>

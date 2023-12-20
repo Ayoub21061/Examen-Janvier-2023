@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/styles.css">
+
+<h2>Vocabulary</h2>
+<% for(elem of listemots) { %>
+    <li>WORD: <strong><%= elem.word %></strong> - TRANSLATION: <strong><%= elem.translation %></strong>  <a href="/delete/<%= elem.idmots %>">Effacer</a> 
+  <% } %>
+
+
+
+
+
+
+
+<h2>Add a new word</h2>
+<form action="/vocabulaire" method="POST">
+    Word:
+    <input type="text" name="NewWord" value="">
+    Translation:
+    <input type="text" name="NewTranslation" value="">
+    <input type="submit" name="Sauvegarder" value="Submit">
+</form>
+
+<form action="/comeback" method="POST">
+    <input type="submit" name="Sauvegarder" value="Retourner à la page principale">
+</form>
+
+
